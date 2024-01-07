@@ -1,12 +1,13 @@
 "use client";
-import React from "react";
+import * as React from "react";
 import { Icons } from "@/components/icons";
 import Image from "next/image";
+import { cn } from "@/lib/utils";
 
 export const Navbar = () => {
   const [show, setShow] = React.useState(false);
   return (
-    <nav className="p-4 flex justify-between items-center sticky top-0 z-50 w-full bg-black">
+    <nav className="p-4 flex justify-between sm:justify-center items-center fixed top-0 z-50 w-full bg-black sm:gap-24">
       <Image src="/img/logo.png" width={60} height={60} alt="logo-img" />
       <Icons.menu
         className="h-8 w-8 sm:hidden"
@@ -29,27 +30,34 @@ export const Navbar = () => {
           <ListOfPages />
         </div>
       )}
-      <ListOfPages />
-      <div className="ml-auto"></div>
+      <ListOfPages className="hidden sm:flex" />
+      {/* <div className="hidden sm:block sm:ml-auto"></div> */}
     </nav>
   );
 };
 
-const ListOfPages = () => {
-  return (
-    <ul className="flex flex-col gap-[5%] h-full sm:flex-row sm:gap-6 sm:ml-auto">
-      <li className="text-3xl sm:text-lg font-semibold text-center hover:cursor-pointer hover:text-primary">
-        Início
-      </li>
-      <li className="text-3xl sm:text-lg font-semibold text-center hover:cursor-pointer hover:text-primary">
-        Incrições
-      </li>
-      <li className="text-3xl sm:text-lg font-semibold text-center hover:cursor-pointer hover:text-primary">
-        Regulamento
-      </li>
-      <li className="text-3xl sm:text-lg font-semibold text-center hover:cursor-pointer hover:text-primary">
-        Galeria
-      </li>
-    </ul>
-  );
-};
+const ListOfPages: React.FC<React.HTMLAttributes<HTMLUListElement>> = ({
+  className,
+  ...props
+}) => (
+  <ul
+    className={cn(
+      "flex flex-col gap-[5%] h-full sm:flex-row sm:gap-6 ",
+      className
+    )}
+    {...props}
+  >
+    <li className="text-3xl sm:text-lg font-semibold text-center hover:cursor-pointer hover:text-primary">
+      INÍCIO
+    </li>
+    <li className="text-3xl sm:text-lg font-semibold text-center hover:cursor-pointer hover:text-primary">
+      INSCRIÇÕES
+    </li>
+    <li className="text-3xl sm:text-lg font-semibold text-center hover:cursor-pointer hover:text-primary">
+      REGULAMENTO
+    </li>
+    <li className="text-3xl sm:text-lg font-semibold text-center hover:cursor-pointer hover:text-primary">
+      GALERIA
+    </li>
+  </ul>
+);

@@ -21,6 +21,7 @@ const config: Config = {
       },
       fontFamily: {
         satoshi: ["var(--font-satoshi)", ...fontFamily.sans],
+        kanit: ["var(--font-kanit)", ...fontFamily.sans],
       },
     },
   },
