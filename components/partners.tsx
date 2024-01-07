@@ -38,15 +38,7 @@ export const Partners = () => {
               width={0}
               height={0}
               sizes="100vw"
-              style={{ width: 150, height: 150 }}
-              alt="logo-img"
-            />
-            <Image
-              src="/img/partners/Logo_VFX.png"
-              width={0}
-              height={0}
-              sizes="100vw"
-              style={{ width: 150, height: 150 }}
+              className="w-[100px] h-[100px] sm:w-[150px] sm:h-[150px]"
               alt="logo-img"
             />
             <Image
@@ -54,15 +46,24 @@ export const Partners = () => {
               width={0}
               height={0}
               sizes="100vw"
-              style={{ width: 250, height: 150 }}
+              className="w-[150px] h-[100px] sm:w-[250px] sm:h-[150px]"
               alt="logo-img"
             />
+            <Image
+              src="/img/partners/Logo_VFX.png"
+              width={0}
+              height={0}
+              sizes="100vw"
+              className="w-[100px] h-[100px] sm:w-[150px] sm:h-[150px]"
+              alt="logo-img"
+            />
+
             <Image
               src="/img/partners/pwrdByCoffe.jpg"
               width={0}
               height={0}
               sizes="100vw"
-              style={{ width: 250, height: 150 }}
+              className="w-[180px] h-[100px] sm:w-[280px] sm:h-[150px]"
               alt="logo-img"
             />
             <Image
@@ -70,7 +71,7 @@ export const Partners = () => {
               width={0}
               height={0}
               sizes="100vw"
-              style={{ width: 150, height: 150 }}
+              className="w-[100px] h-[100px] sm:w-[150px] sm:h-[150px]"
               alt="logo-img"
             />
           </div>
