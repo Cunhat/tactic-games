@@ -37,7 +37,7 @@ export const Partners = () => {
               width={0}
               height={0}
               sizes="100vw"
-              style={{ width: 100, height: "auto" }}
+              style={{ width: 150, height: 150 }}
               alt="logo-img"
             />
             <Image
@@ -45,7 +45,7 @@ export const Partners = () => {
               width={0}
               height={0}
               sizes="100vw"
-              style={{ width: 100, height: "auto" }}
+              style={{ width: 150, height: 150 }}
               alt="logo-img"
             />
             <Image
@@ -53,7 +53,7 @@ export const Partners = () => {
               width={0}
               height={0}
               sizes="100vw"
-              style={{ width: 150, height: "auto" }}
+              style={{ width: 250, height: 150 }}
               alt="logo-img"
             />
             <Image
@@ -61,7 +61,7 @@ export const Partners = () => {
               width={0}
               height={0}
               sizes="100vw"
-              style={{ width: 150, height: "auto" }}
+              style={{ width: 250, height: 150 }}
               alt="logo-img"
             />
             <Image
@@ -69,7 +69,7 @@ export const Partners = () => {
               width={0}
               height={0}
               sizes="100vw"
-              style={{ width: 100, height: "auto" }}
+              style={{ width: 150, height: 150 }}
               alt="logo-img"
             />
           </div>
