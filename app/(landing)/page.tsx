@@ -1,9 +1,9 @@
-import Image from "next/image";
+import { Partners } from "@/components/partners";
 
 export default function Home() {
   return (
     <div className="h-full gap-24">
-      <div className="h-[80%] sm:h-[80%] w-full relative flex">
+      <div className="h-[60%] sm:h-[60%] w-full relative flex">
         <div className="bg-black/60 absolute top-0 left-0 right-0 bottom-0 z-10 h-full w-full flex flex-col justify-center items-center gap-4">
           <h1 className="text-5xl sm:text-7xl font-kanit bold">
             1 · 2 · 3 DEZ 2024
@@ -23,6 +23,7 @@ export default function Home() {
           <source src="/videos/sample.mp4" type="video/mp4" />
         </video>
       </div>
+      <Partners />
       <PrizeMoney />
     </div>
   );
