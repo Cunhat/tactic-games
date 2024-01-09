@@ -4,6 +4,7 @@ import localFont from "next/font/local";
 
 import { Kanit } from "next/font/google";
 import { Navbar } from "@/components/ui/nav-bar";
+import { Footer } from "@/components/ui/footer";
 
 // const inter = Inter({ subsets: ["latin"] });
 
@@ -24,7 +25,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <main className="grid grid-rows-[auto_1fr] min-h-screen">
+    <main className="grid grid-rows-[auto_1fr_auto] min-h-screen">
       <Navbar />
       <main className="h-full ">{children}</main>
     </main>

@@ -1,9 +1,10 @@
 import { Partners } from "@/components/partners";
+import { Footer } from "@/components/ui/footer";
 
 export default function Home() {
   return (
     <div className="h-full gap-24">
-      <div className="h-[60%] sm:h-[60%] w-full relative flex">
+      <div className="h-[50%] sm:h-[50%] w-full relative flex">
         <div className="bg-black/60 absolute top-0 left-0 right-0 bottom-0 z-10 h-full w-full flex flex-col justify-center items-center gap-4">
           <h1 className="text-5xl sm:text-7xl font-kanit bold">
             1 · 2 · 3 DEZ 2024
@@ -25,9 +26,29 @@ export default function Home() {
       </div>
       <Partners />
       <PrizeMoney />
+      <Location />
+      <Footer />
     </div>
   );
 }
+
+const Location = () => {
+  return (
+    <div className="flex flex-col gap-4 justify-center items-center ">
+      <h2 className="text-3xl font-bold tracking-tighter md:text-4xl/tight text-primary font-satoshi">
+        Localização
+      </h2>
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3103.0057245874295!2d-8.9934911!3d38.9466976!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd1927c720bc2781%3A0xf5e348ad6f2be1d!2sPavilhao%20Multiusos%20de%20Vila%20Franca%20de%20Xira!5e0!3m2!1spt-PT!2spt!4v1704841236198!5m2!1spt-PT!2spt"
+        width="100%"
+        height="350"
+        allowFullScreen
+        loading="lazy"
+        referrerPolicy="no-referrer-when-downgrade"
+      ></iframe>
+    </div>
+  );
+};
 
 const PrizeMoney = () => {
   return (
